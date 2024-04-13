@@ -160,10 +160,11 @@ a{
     padding: 3rem;
     background: #289adb;
     position: fixed;
-    top: 1;
+    top: 0;
 }
 
 .menu-expend >a{
+    margin-top: 0;
     width: 100%;
     text-align: center;
     font-size: 20px;
@@ -180,6 +181,7 @@ a{
     .search{
         width: 300px;
     }
+   
 }
 
 @media (max-width : 1051px){
@@ -205,8 +207,10 @@ a{
 /*Hero */
 .hero{
     background: url("https://d1csarkz8obe9u.cloudfront.net/assets/OG-images-banner-generator.png");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+ 
     height: 400px;
     width: 100%;
     margin-top: 70px;
@@ -215,23 +219,31 @@ a{
     align-items: center;
     
 }
-.top-cards{
+
+ .top-cards{
+    min-width: 200px;
     margin-top: 470px;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
     width: 100%;
-    height: 400px;
-}
+    
+} 
+
+
 
 .top-cards .card{
     width: 350px;
     height: 350px;
+    flex-grow: 1;
+    min-width: 200px;
     background: #fff;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     padding: 0.6rem;
+    margin: 10px;
 }
 
 .top-cards .card .card-img{
@@ -254,4 +266,37 @@ a{
 .top-cards .card .card-body .desc, .card-title{
     margin-bottom: 10px;
     overflow: hidden;
+}
+
+@media screen and (max-width : 1550px) {
+    .top-cards .card{
+        max-width: 400px;
+    }
+}
+
+
+@media screen and (max-width : 810px) {
+    .top-cards .card{
+        max-width: 300px;
+    }
+}
+@media screen and (max-width : 708px) {
+    .top-cards {
+        margin-top: 700px;
+    }
+    .top-cards .card{
+        max-width: 250px;
+    }
+}
+@media screen and (max-width : 611px) {
+    .top-cards {
+        margin-top: 400px;
+    }
+    .top-cards .card{
+        max-width: 70%;
+        height: auto;
+    }
+    .top-cards .card .card-img{
+        display: none;
+    }
 }

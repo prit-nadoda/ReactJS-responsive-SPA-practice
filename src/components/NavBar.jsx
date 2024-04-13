@@ -1,6 +1,8 @@
 import React from "react";
 import resNav from "../assets/scripts/app.js";
 
+
+
 function NavBar() {
   return (
     <>
