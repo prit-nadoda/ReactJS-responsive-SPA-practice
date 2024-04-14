@@ -8,6 +8,7 @@ const ContactSection = () => {
     })
 
     const submitHandeler = () => {
+        if(contact.email.length == 0 || contact.name.length == 0 || contact.message.length == 0) return alert("All fields are required!")
         alert(`Name : ${contact.name}\n Email : ${contact.email}\n Message : ${contact.message}`);
         setContact({
             name: "",
