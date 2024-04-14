@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
 import ContactSection from './ContactSection'
+import Footer from './Footer'
 
 function MainContent() {
   return (
@@ -11,6 +12,7 @@ function MainContent() {
             <HeroSection/>
             <AboutSection/>
             <ContactSection/>
+            <Footer/>
         </div>
     </>
 
